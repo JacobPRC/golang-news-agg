@@ -1,0 +1,18 @@
+<h1>{{.Title}}</h1>
+<br />
+
+<table>
+    <thead>
+        <th>Title</th>
+        <th>Keyword</th>
+    </thead>
+    <tbody>
+    {{range $key, $val := .News}}
+        <tr>
+            <td><a href="{{$val.Location}}" target="_blank">{{$key}}</a></td>
+            <td>{{$val.Keyword}}</td>
+        </tr>
+
+        {{end}}
+    </tbody>
+</table>
